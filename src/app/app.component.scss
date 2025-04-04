@@ -15,12 +15,14 @@ mat-toolbar{
 mat-sidenav-container {
   
     height:100%;
+
 }
 
 
 // Move the content down so that it won't be hidden by the toolbar
 mat-sidenav {
     width: auto;
+    position:fixed;
     padding-top: 3.5rem;
     transition: width 0.3s ease;
     background-color: rgba(lightgreen, 0.2);

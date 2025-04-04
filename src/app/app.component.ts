@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -9,7 +9,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatIconModule,MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule, MatSidenav],
+  imports: [RouterOutlet, MatIconModule,MatButtonModule, MatToolbarModule, MatSidenavModule, MatListModule, MatSidenav, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
