@@ -1,15 +1,22 @@
 <div class="timeline">
-    @for(activity of activities; track activity.title){
-      <div class="timeline-item">
+    <!-- Iterate over each category -->
+    <div *ngFor="let category of objectKeys(groupedActivities)" class="category-section">
+      <h2>{{ category }}</h2>
+<hr>
+      <!-- Iterate over the activities within each category -->
+      <div *ngFor="let activity of groupedActivities[category]; let i = index" class="timeline-item">
         <div class="timeline-content">
-            <h3>{{ activity.title }}</h3>
-            <p class="date">{{ activity.date }}</p>
-            <p class="description">{{ activity.description }}</p>
-          </div>
-          <!-- Add arrow between items -->
-    
-        
+          <h3>{{ activity.title }}</h3>
+          <p class="date">{{ activity.date }}</p>
+          <p class="description">{{ activity.description }}</p>
+          <p class="location">Locatie: {{ activity.location }}</p>
+        </div>
+  
+        <!-- Add arrows between items if not the last item in the category -->
+        <div *ngIf="!isLastItem(groupedActivities[category], activity)" class="arrow">
+          <span>&rarr;</span> <!-- Customize this as per your arrow design -->
+        </div>
       </div>
-    }
-
+    </div>
   </div>
+  

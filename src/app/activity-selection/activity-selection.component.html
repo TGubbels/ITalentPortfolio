@@ -1,0 +1,90 @@
+<div class="activity-selection">
+    <h2>Select an Activity</h2>
+
+    <!-- Display activity options -->
+    <div class="activities-list">
+        <div *ngFor="let activity of activities; let i = index" (click)="selectActivity(activity)" class="activity-item"
+            [class.selected]="activity === selectedActivity">
+            <h3>{{ activity.title }}</h3>
+        </div>
+    </div>
+
+    <!-- Show the details of the selected activity and its layout -->
+    @if(selectedActivity){
+    <div class="activity-details">
+
+        <!-- Conditionally show layout based on selected activity -->
+        <div *ngIf="selectedActivity.id === 1" class="content">
+            <h4>Doelstelling</h4>
+            <p>
+                De doelstelling van deze activiteit was om meer te weten komen over security en cloud security. Voor
+                mezelf was als doel, om erachter te komen of de security kant van development ook een grote interesse is
+                voor mij en of het iets is waar ik later toch dieper in wil duiken.
+            </p>
+
+            <h4>Verslag</h4>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h4>Reflectie</h4>
+            <p></p>
+            <p></p>
+
+        </div>
+        <div *ngIf="selectedActivity.id === 2" class="content-container">
+            <div class="image-container">
+                <img src="assets/image2.png" alt="Main Image" class="main-image" />
+                <img src="assets/vorm1.png" alt="Main Image" class="main-image" />
+                <img src="assets/vorm2.png" alt="Main Image" class="main-image" />
+            </div>
+            <div class=" content">
+                <h4>Doelstelling</h4>
+                <p>
+                    De doelstelling van deze activiteit was om meer te weten komen over security en cloud security. Voor
+                    mezelf was als doel, om erachter te komen of de security kant van development ook een grote
+                    interesse is
+                    voor mij en of het iets is waar ik later toch dieper in wil duiken.
+                </p>
+                <div class="verslag">
+                    <h4>Verslag</h4>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <h4>Reflectie</h4>
+                <p></p>
+                <p></p>
+
+            </div>
+            <div class="image-container">
+                <img src="assets/steen1.png" alt="Main Image" class="main-image" />
+                <img src="assets/steen2.png" alt="Main Image" class="main-image" />
+            </div>
+        </div>
+
+        <div *ngIf="selectedActivity.id === 3" class=" content">
+            <h4>Doelstelling</h4>
+            <p>
+                De doelstelling van deze activiteit was om meer te weten komen over security en cloud security. Voor
+                mezelf was als doel, om erachter te komen of de security kant van development ook een grote interesse is
+                voor mij en of het iets is waar ik later toch dieper in wil duiken.
+            </p>
+
+            <h4>Verslag</h4>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h4>Reflectie</h4>
+            <p></p>
+            <p></p>
+
+        </div>
+    </div>
+    }
+</div>

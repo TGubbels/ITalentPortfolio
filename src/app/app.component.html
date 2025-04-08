@@ -23,6 +23,24 @@
             }
         </span>
       </a>
+
+      <a mat-list-item routerLink="/activity-selection" routerLinkActive="active-link">
+        <span class="entry">
+          <mat-icon fontIcon="edit"></mat-icon>
+          @if(!isCollapsed){
+            <span >Activity Selection</span>
+            }
+        </span>
+      </a>
+
+      <a mat-list-item routerLink="/introspection" routerLinkActive="active-link">
+        <span class="entry">
+          <mat-icon fontIcon="emoji_people"></mat-icon>
+          @if(!isCollapsed){
+            <span >Intropection</span>
+            }
+        </span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
