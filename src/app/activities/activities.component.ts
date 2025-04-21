@@ -38,7 +38,7 @@ export class ActivitiesComponent {
   
 }
 
-interface Activity {
+export interface Activity {
   id: number;
   category: string;
   title: string;
@@ -48,7 +48,7 @@ interface Activity {
 }
 
 // Define the grouped activities type
-interface GroupedActivities {
+export interface GroupedActivities {
   [category: string]: Activity[];
 }
 
@@ -97,7 +97,7 @@ interface GroupedActivities {
     id: 6,
     category: 'Seminaries',
     title: 'ITLicious: Flutter',
-    description: `Uitleg hoe het bedrijf flutte gebruikt en de voordelen van flutter. Ook hoe flutter in elkaar steekt met de engine en geschiedenis. Een demo om zelf een kleine app te maken, to-do app maken.`,
+    description: `Uitleg hoe het bedrijf Flutter gebruikt en de voordelen van flutter. Ook hoe flutter in elkaar steekt met de engine en geschiedenis. Een demo om zelf een kleine app te maken, to-do app maken.`,
     date: '06-11-2024, 3 uur',
     location: 'ITLicious, Corda Campus',
   },
@@ -169,7 +169,7 @@ interface GroupedActivities {
     id: 15,
     category: 'Internationalisering',
     title: 'Stage Netpresenter',
-    description: `Stage in Nederland bij Netpresenter in Beek. Een notificationcentrum bouwen voor hun medewerkersapplicatie.`,
+    description: `Stage in Nederland bij Netpresenter in Beek. Een notificatiecentrum bouwen voor hun medewerkersapplicatie.`,
     date: '24-02-2025 – 30-05-2025',
     location: 'Netpresenter, Beek',
   },
